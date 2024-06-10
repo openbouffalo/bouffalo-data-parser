@@ -1,3 +1,4 @@
 node_modules/*
-workdir/*/*
-!workdir/diff-finder/profiles/*
+workdir/diff-finder/*
+!workdir/diff-finder/profiles/*.yaml
+!workdir/diff-finder/profiles

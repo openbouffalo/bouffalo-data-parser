@@ -1,0 +1,50 @@
+file_set:
+  - aon_reg.h
+  - cam_reg.h
+  - cks_reg.h
+  - ef_ctrl_reg.h
+  - emac_reg.h
+  - gpip_reg.h
+  - i2c_reg.h
+  - ir_reg.h
+  - l1c_reg.h
+  - pdm_reg.h
+  - pwm_reg.h
+  - sec_dbg_reg.h
+  - sf_ctrl_reg.h
+  - timer_reg.h
+  - uart_reg.h
+  - bl702.h
+  - cci_reg.h
+  - dma_reg.h
+  - ef_data_0_reg.h
+  - glb_reg.h
+  - hbn_reg.h
+  - i2s_reg.h
+  - kys_reg.h
+  - mjpeg_reg.h
+  - pds_reg.h
+  - qdec_reg.h
+  - sec_eng_reg.h
+  - spi_reg.h
+  - tzc_sec_reg.h
+  - usb_reg.h
+
+repos:
+  - url: https://github.com/bouffalolab/bl_iot_sdk-components
+    branches:
+      - name: main
+        path: platform/soc/bl702/bl702_std/BSP_Driver/regs
+  - url: https://github.com/bouffalolab/bl_iot_sdk
+    branches:
+      - name: bl702_matter
+        path: components/platform/soc/bl702/bl702_std/BSP_Driver/regs
+      - name: master
+        path: components/platform/soc/bl702/bl702_std/BSP_Driver/regs
+  - url: https://github.com/bouffalolab/bouffalo_sdk
+    branches:
+      - name: master
+        path: drivers/soc/bl702/std/include/hardware
+      - name: release_v1.4.5
+        path: drivers/bl702_driver/regs
+      
