@@ -1,0 +1,3 @@
+node_modules/*
+workdir/*/*
+!workdir/diff-finder/profiles/*
