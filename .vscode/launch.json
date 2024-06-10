@@ -12,6 +12,16 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/parser.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch diff-finder",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "cwd": "${workspaceFolder}/workdir/diff-finder",
+      "program": "${workspaceFolder}/bin/diff-finder/diff-finder.js"
     }
   ]
 }
