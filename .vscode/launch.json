@@ -7,11 +7,12 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch data-parser",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/parser.js"
+      "program": "${workspaceFolder}/bin/data-parser/data-parser.js",
+      "cwd": "${workspaceFolder}/workdir/data-parser"
     },
     {
       "type": "node",
