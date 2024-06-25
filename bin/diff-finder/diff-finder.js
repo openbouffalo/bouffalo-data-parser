@@ -4,10 +4,10 @@ import fs2 from 'fs';
 import crypto from 'crypto';
 import path from 'path';
 import { simpleGit } from 'simple-git';
+import { fileExists } from '../../lib/utils.js'
 
 // utils
 const md5 = data => crypto.createHash('md5').update(data).digest("hex");
-const fileExists = path => new Promise(resolve => fs.access(path, fs.constants.F_OK).then(() => resolve(true)).catch(() => resolve(false)));
 
 function calculateHash(filePath, algorithm) {
   return new Promise((resolve, reject) => {

@@ -1,0 +1,7 @@
+source_dir: ./bl702_regs
+output_dir: ./bl702_regs_yaml
+
+files:
+  - name: kys_reg.h
+    type: register_header
+    struct_name: kys_reg

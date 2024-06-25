@@ -1,0 +1,100 @@
+source_dir: ./bl702_regs
+output_dir: ./bl702_regs_yaml
+
+files:
+  - name: aon_reg.h
+    type: register_header
+    struct_name: aon_reg
+  - name: cam_reg.h
+    type: register_header
+    struct_name: cam_reg
+  - name: cci_reg.h
+    type: register_header
+    struct_name: cci_reg
+  - name: cks_reg.h
+    type: register_header
+    struct_name: cks_reg
+  - name: dma_reg.h
+    type: register_header
+    struct_name: dma_reg
+  - name: ef_ctrl_reg.h
+    type: register_header
+    struct_name: ef_ctrl_reg
+  - name: ef_data_0_reg.h
+    type: register_header
+    struct_name: ef_data_0_reg
+  - name: ef_data_1_reg.h
+    type: register_header
+    struct_name: ef_data_1_reg
+  - name: emac_reg.h
+    type: register_header
+    struct_name: emac_reg
+  - name: glb_reg.h
+    type: register_header
+    struct_name: glb_reg
+  - name: gpip_reg.h
+    type: register_header
+    struct_name: gpip_reg
+  - name: hbn_reg.h
+    type: register_header
+    struct_name: hbn_reg
+  - name: i2c_reg.h
+    type: register_header
+    struct_name: i2c_reg
+  - name: i2s_reg.h
+    type: register_header
+    struct_name: i2s_reg
+  - name: ir_reg.h
+    type: register_header
+    struct_name: ir_reg
+  - name: kys_reg.h
+    type: register_header
+    struct_name: kys_reg
+  - name: l1c_reg.h
+    type: register_header
+    struct_name: l1c_reg
+  - name: mjpeg_reg.h
+    type: register_header
+    struct_name: mjpeg_reg
+  - name: pdm_reg.h
+    type: register_header
+    struct_name: pdm_reg
+  - name: pds_reg.h
+    type: register_header
+    struct_name: pds_reg
+  - name: pwm_reg.h
+    type: register_header
+    struct_name: pwm_reg
+  - name: qdec_reg.h
+    type: register_header
+    struct_name: qdec_reg
+  - name: rf_reg.h
+    type: register_header
+    struct_name: rf_reg
+  - name: sec_dbg_reg.h
+    type: register_header
+    struct_name: sec_dbg_reg
+  - name: sec_eng_reg.h
+    type: register_header
+    struct_name: sec_eng_reg
+  - name: sf_ctrl_reg.h
+    type: register_header
+    struct_name: sf_ctrl_reg
+  - name: spi_reg.h
+    type: register_header
+    struct_name: spi_reg
+  - name: timer_reg.h
+    type: register_header
+    struct_name: timer_reg
+  - name: tzc_nsec_reg.h
+    type: register_header
+    struct_name: tzc_nsec_reg
+  - name: tzc_sec_reg.h
+    type: register_header
+    struct_name: tzc_sec_reg
+  - name: uart_reg.h
+    type: register_header
+    struct_name: uart_reg
+  - name: usb_reg.h
+    type: register_header
+    struct_name: usb_reg

@@ -11,6 +11,9 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
+      "args": [
+        "${input:dataParserProfile}"
+      ],
       "program": "${workspaceFolder}/bin/data-parser/data-parser.js",
       "cwd": "${workspaceFolder}/workdir/data-parser"
     },
@@ -23,6 +26,14 @@
       ],
       "cwd": "${workspaceFolder}/workdir/diff-finder",
       "program": "${workspaceFolder}/bin/diff-finder/diff-finder.js"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "dataParserProfile",
+      "type": "promptString",
+      "description": "Profile to use for data-parser",
+      "default": "profiles/bl702_regs.yaml"
     }
   ]
 }
