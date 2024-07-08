@@ -111,14 +111,14 @@ export class DocRegisterParser {
     const isF1Rsvd = f1['Name'].toLowerCase() === 'rsvd'; 
 
     if (!isF1Rsvd && f1['Name'] !== f2.name) return 'name-mismatch';
-    if (f1['Type'] !== f2.permissions &&
-       (!isF1Rsvd && !f2.permissions !== 'rsvd')) return 'perm-mismatch';
-    if (f1['bitstart'] !== f2.bit_offset) return 'bit_offset-mismatch';
-    if (isNaN(f1['bitend']) && f2.bit_size !== 1) return 'bit_size-mismatch1';
-    if (!isNaN(f1['bitend']) && f2.bit_size !== f1['bitend'] - f1['bitstart'] + 1) {
+    if (f1['Type'] !== f2.access &&
+       (!isF1Rsvd && !f2.access !== 'rsvd')) return 'perm-mismatch';
+    if (f1['bitstart'] !== f2.offset_bits) return 'bit_offset-mismatch';
+    if (isNaN(f1['bitend']) && f2.size_bits !== 1) return 'bit_size-mismatch1';
+    if (!isNaN(f1['bitend']) && f2.size_bits !== f1['bitend'] - f1['bitstart'] + 1) {
       return 'bit_size-mismatch2';
     }
-    if (f1['Reset'] !== f2.default_value) {
+    if (f1['Reset'] !== f2.reset_value) {
       return 'reset-mismatch';
     }
     return null;
@@ -171,7 +171,7 @@ export class DocRegisterParser {
       let reg = this._regs.find(r => r.name === part.name);
       if (reg === undefined) {
         const manreg = this._regs[i - 1];
-        assert(manreg.byte_offset === bit_offset / 8);
+        assert(manreg.offset_bytes === bit_offset / 8);
         console.log(`TODO: Name of reg is different ${part.name} - ${manreg.name}`)
         reg = manreg;
       }
@@ -185,7 +185,7 @@ export class DocRegisterParser {
 
         let finfield = reg.fields.find(f => f.name === field['Name']);
         if (finfield === undefined) {
-          finfield = reg.fields.find(f => f.bit_offset === field['bitstart']);
+          finfield = reg.fields.find(f => f.offset_bits === field['bitstart']);
           if (finfield === undefined) {
             // if (field.Name.toLowerCase() === 'rsvd') continue;
             console.log(`TODO: Not found: ${this._fi.struct_name} - ${reg.name}, ${field.Name}`);
@@ -198,7 +198,7 @@ export class DocRegisterParser {
           console.log(`TODO: Check failed ${this._fi.struct_name} - ${reg.name}, ${field.Name} | ${finfield.name}, err: ${check}`);
         }
         finfield.description = field.Description;
-        bit_offset += finfield.bit_size;
+        bit_offset += finfield.size_bits;
       }
     }
   }
