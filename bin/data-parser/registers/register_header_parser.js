@@ -1,9 +1,9 @@
-import { DataParser } from "./data-parser.js";
-import CastXML from "../../lib/castxml/castxml.js"
+import { DataParser } from "../data-parser.js";
+import CastXML from "../../../lib/castxml/castxml.js"
 import path from 'path';
-import ArrayType from "../../lib/castxml/arraytype.js";
-import Struct from "../../lib/castxml/struct.js";
-import Field from "../../lib/castxml/field.js";
+import ArrayType from "../../../lib/castxml/arraytype.js";
+import Struct from "../../../lib/castxml/struct.js";
+import Field from "../../../lib/castxml/field.js";
 import assert from "assert";
 import * as coreyml from "./core_yaml.js";
 import fs from "fs/promises";

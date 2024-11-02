@@ -1,9 +1,9 @@
 import YAML from 'yaml';
 import fs from 'fs/promises';
-import { RegisterHeaderParser } from './register_header_parser.js';
+import { RegisterHeaderParser } from './registers/register_header_parser.js';
 import { fileExists } from '../../lib/utils.js';
 import path from 'path';
-import { DocRegisterParser } from './doc_register_parser.js';
+import { DocRegisterParser } from './registers/doc_register_parser.js';
 
 export class DataParser {
   constructor () {
