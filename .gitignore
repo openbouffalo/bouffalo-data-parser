@@ -2,3 +2,5 @@ node_modules/*
 workdir/diff-finder/*
 !workdir/diff-finder/profiles/*.yaml
 !workdir/diff-finder/profiles
+workdir/data-parser/*
+!workdir/data-parser/profiles/*
